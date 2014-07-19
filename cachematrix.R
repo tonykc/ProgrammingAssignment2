@@ -33,11 +33,20 @@
 ## Objective
 ##   To create a special "matrix" object that can cache its inverse.
 ##
+## Input
+##   An invertible matrix
+##
 ## Output
-##   Return a list of 4 funcions
+##   Return a list of funcions: 
+##     set : to store  the matrix
+##     get ; to return the stored matrix
+##     set.inverse : to store the inverse of the stored matrix
+##     get.inverse : to return the inverse of the stored matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-  ## Initialize the cache for inverse as NULL
+  ## x : the stored matrix
+  ## inverse : cache for inverse of x; initialize as NULL
+  
   inverse <- NULL
   
   set <- function(y) {
